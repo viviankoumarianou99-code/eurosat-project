@@ -16,3 +16,4 @@ outputs/*/checkpoints/
 # OS files
 Thumbs.db
 .DS_Store
+notebooks/.ipynb_checkpoints/
