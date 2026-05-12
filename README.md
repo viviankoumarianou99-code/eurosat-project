@@ -110,3 +110,20 @@ Inspection of the confusion matrices indicates that most misclassifications occu
 ### 9.1 Environment Setup
 ```bash
 pip install -r requirements.txt
+
+### 9.2 Training
+Model training is performed using the provided training script.  
+Both models are trained using a head-only transfer learning strategy.
+
+```bash
+python -m src.train --model resnet50 --train_mode head
+python -m src.train --model efficientnet_b0 --train_mode head
+``
+
+### 9.3 Evaluation
+Evaluation is carried out on a held-out test set using the evaluation script.
+The process computes test accuracy and generates confusion matrices.
+
+```bash
+python -m src.eval --model resnet50
+python -m src.eval --model efficientnet_b0
